@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display: grid;
+            /* grid-template-rows: 1fr 1fr 1fr; */
+            grid-template-columns: repeat(3,1fr);
+            /* column-gap: 1em;
+            row-gap: 1em; */
+            gap:1em;
+            /* grid-auto-rows: 100px; */
+            grid-auto-rows: minmax(100px,auto);
+        }
+        .nested{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-auto-rows: 70px;
+            gap:1em;
+        }
+        .wrapper div{
+            background-color: #eee;
+            padding:1em;
+        }
+        .wrapper div:nth-child(odd){
+            background-color: #ddd;
+        }
+        .nested > div{
+            border: #333 1px solid;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, amet!
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum dignissimos soluta quas tempore ipsum itaque laborum 
+            sapiente adipisci incidunt excepturi asperiores odit delectus nam voluptatum repellendus, sint cupiditate atque hic doloribus! 
+            Consectetur quaerat nostrum perferendis dolore distinctio voluptatum, nisi quis quod suscipit nulla itaque incidunt quas laborum 
+            nobis illum laboriosam aliquam facilis nam vero et adipisci voluptatem! Voluptates odio assumenda optio, magnam blanditiis sit 
+            perferendis! Iusto iste, quia quos sunt non assumenda rerum repellat magni perferendis tenetur? A, rem sint. Quasi accusantium 
+            at omnis voluptas consectetur velit perspiciatis nam voluptatum, placeat molestiae minima quae autem dolores molestias fugit 
+            esse distinctio.
+        </div>
+        <div class="nested">
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, amet!
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, amet!
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, amet!
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, amet!
+        </div>
+    </div>
+</body>
+</html>
